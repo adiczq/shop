@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "price": 10.99,
+      "kodEan": "",
+      "isDicount": true,
+      "promoPrice": 8.99,
+      "tags": ["a", "b", "c"],
+      "category": "A",
+      "images": [
+        "https://images.unsplash.com/photo-1679678691006-3afa56204979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80",
+        "https://images.unsplash.com/photo-1659482633347-e56ce63d147b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+      ],
+      "rates": 3,
+      "qty": 10
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 15.99,
+      "kodEan": "",
+      "isDicount": true,
+      "promoPrice": 11.99,
+      "tags": ["a", "c"],
+      "category": "B",
+      "images": [
+        "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80",
+        "https://images.unsplash.com/photo-1622597467821-df79dcb4f94d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
+      ],
+      "rates": 1,
+      "qty": 0
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "price": 20.99,
+      "kodEan": "",
+      "isDicount": false,
+      "promoPrice": 11.99,
+      "tags": ["a", "c"],
+      "category": "A",
+      "images": [
+        "https://plus.unsplash.com/premium_photo-1673329319173-77c42d873a38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+        "https://plus.unsplash.com/premium_photo-1676807441166-38060bdc60ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
+      ],
+      "rates": 3,
+      "qty": 3
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "price": 2.99,
+      "kodEan": "",
+      "isDicount": false,
+      "promoPrice": 11.99,
+      "tags": ["a"],
+      "category": "A",
+      "images": [
+        "https://images.unsplash.com/photo-1647891937869-bc31fe3f9836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+      ],
+      "rates": 5,
+      "qty": 3
+    }
+  ]
+}
