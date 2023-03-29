@@ -3,6 +3,7 @@ import { CartState } from "./CartState";
 import { createAppbar } from "./components/appbar";
 import { createCard } from "./components/card";
 import { createCart } from "./components/cart";
+import { currencyFormat } from "./utils/currencyFormat";
 
 const API_URL = "http://localhost:3000";
 
@@ -13,10 +14,7 @@ const cardsParent = document.createElement("div");
 const fetchProducts = () => fetch(`${API_URL}/items`).then((res) => res.json());
 
 const updateCart = () => {
-  const sumProduct = new Intl.NumberFormat("pl-PL", {
-    style: "currency",
-    currency: "PLN"
-  }).format(
+  const sumProduct = currencyFormat(
     cartState.state.reduce(
       (acc, curr) =>
         (acc +=
@@ -28,10 +26,9 @@ const updateCart = () => {
   const createProductsHtml = () =>
     cartState.state
       .map((product) => {
-        const price = new Intl.NumberFormat("pl-PL", {
-          style: "currency",
-          currency: "PLN"
-        }).format(product.isDiscount ? product.promoPrice : product.price);
+        const price = currencyFormat(
+          product.isDiscount ? product.promoPrice : product.price
+        );
 
         return `
             <div class="flex items-center">
@@ -54,13 +51,13 @@ const cartState = new CartState(updateCart);
 
 const buildProducts = () => {
   return fetchProducts().then((data) => {
-    return data.map((item, _, products) => {
+    return data.map((item) => {
       const card = document.createElement("div");
 
       card.classList.add("w-[30%]");
       card.innerHTML = createCard({
         name: item.name,
-        price: item.price,
+        price: currencyFormat(item.price),
         images: item.images
       });
 
@@ -81,7 +78,6 @@ const buildProducts = () => {
 
 const onProductQtyInput = (ev) => {
   ev.stopPropagation();
-  console.log("ev", ev);
 
   const productId = +ev.target.dataset.id;
 
